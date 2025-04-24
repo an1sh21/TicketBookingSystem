@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Challenge</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin: 10px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .block {
+      display: block;
+      background-color: #3498db;
+      width: 200px;
+    }
+
+    .inline {
+      display: inline;
+      background-color: #e74c3c;
+      width: 200px; /* this won't do anything here! */
+    }
+
+    .inline-block {
+      display: inline-block;
+      background-color: #2ecc71;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Display Property Challenge</h1>
+  
+  <p>Block:</p>
+  <div class="box block">Block Element</div>
+  <div class="box block">Another Block</div>
+
+  <p>Inline:</p>
+  <span class="box inline">Inline Element</span>
+  <span class="box inline">Another Inline</span>
+
+  <p>Inline-block:</p>
+  <div class="box inline-block">Inline-Block Element</div>
+  <div class="box inline-block">Another Inline-Block</div>
+</body>
+</html>
