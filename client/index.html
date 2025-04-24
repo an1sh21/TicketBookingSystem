@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Booking App</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #100e17;
+      color: #eee;
+      padding: 20px;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 8px;
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: row; /* can be 'column' too */
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      height: 400px;
+      width: 350px;
+      background-color: #17141d;
+      border-radius: 10px;
+      box-shadow: -1rem 0 3rem #000;
+      transition: 0.4s ease-out;
+      position: relative;
+      left: 0px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+     }
+
+    @keyframes fadeInUp {
+      to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+    }
+      
+    }
+
+    .card:not(:first-child) {
+      margin-left: -50px;
+    }
+
+    .card:hover {
+      transform: translateY(-20px);
+      box-shadow: 0 0 20px #ff9800;  /* Glowing orange light */
+      transform: translateY(-10px); /* Moves up a bit */
+    }
+
+    .card:hover ~ .card {
+      position: relative;
+      left: 50px;
+    }
+
+    .title {
+      color: white;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+    .card {
+            width: 100%;   /* Make each card full width on small screens */
+        }
+    }   
+  </style>
+</head>
+<body>
+  <h1>Welcome to MovieMania 🎬</h1>
+  <h2>Now Showing:</h2>
+
+  <div class="flex-container">
+    <div class="card">
+      <h3 class="title">Avengers: Endgame</h3>
+      <img src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SL1304_.jpg">
+      <p>After Thanos disintegrates half the universe, the Avengers must reunite to restore balance.</p>
+    </div>
+    <div class="card">
+      <h3 class="title">Spider-Man: No Way Home</h3>
+      <img src="https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_.jpg">
+      <p>Peter Parker seeks Doctor Strange’s help to fix his exposed identity, causing a multiverse crisis.</p>
+    </div>
+    <div class="card">
+      <h3 class="title">John Wick</h3>
+      <img src="https://legacymovieposters.com/cdn/shop/products/johnwick_fuse.jpg?v=1668071841&width=1946">
+      <p>Legendary assassin John Wick is forced back into action in this high-octane thriller.</p>
+    </div>
+    <div class="card">
+      <h3 class="title">Transformers One</h3>
+      <img src="https://lh3.googleusercontent.com/proxy/O9YW21TZUYpqQsEXxuX7eWIdYdlniuRFW99HFwGUAOQo_tsPiq2XDmb3J2ASMCGNEWNRjlVX9Ax-af5NNLjw4Y28T2HIDExr4hdB8n8qXVpMHfealxK9">
+      <p>The untold origin story of Optimus Prime and Megatron, once friends, now enemies.</p>
+    </div>
+  </div>
+</body>
+</html>
