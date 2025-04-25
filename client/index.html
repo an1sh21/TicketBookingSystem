@@ -34,25 +34,26 @@
     }
   
     .card {
-      background-color: #1f1b2e;
-      color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      width: 300px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      animation: fadeInUp 0.6s forwards;
-      opacity: 0;
-      transform: translateY(20px);
-    }
+    position: relative;
+    background-color: #1f1b2e;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 0;
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
   
-    .card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 10px 30px #ff9800aa;
-    }
+  .card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px #ff9800, 0 0 40px #ff9800aa, 0 0 60px #ff9800aa;
+  }
   
     .card img {
       width: 100%;
@@ -60,7 +61,37 @@
       margin-bottom: 15px;
       object-fit: cover;
       height: 450px;
-    }
+  }
+
+  
+  
+/* Add this new gradient border using a pseudo-element */
+
+:root {
+  --clr-1: #eb2282;
+  --clr-2: #0c20ec;
+  --clr-3: #5ffbf1;
+}
+
+.card-border {
+  padding: 2px;
+  border-radius: 18px; /* slightly larger than .card */
+  background: linear-gradient(270deg, var(--clr-1), var(--clr-2), var(--clr-3), var(--clr-1));
+  background-size: 600% 600%;
+  animation: animated-gradient 5s linear infinite;
+}
+
+.card-border > .card {
+  border-radius: 16px;
+  background-color: #1f1b2e;
+}
+
+@keyframes animated-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
   
     .title {
       font-weight: 600;
@@ -120,7 +151,7 @@
     
   .carousel-container {
 	position: relative;
-	width: 100%;
+	width: 200%;
 	padding: 2rem 0;
   }
 
@@ -199,6 +230,9 @@
 }
 
 
+
+
+
     
   </style>
   
@@ -208,27 +242,57 @@
   <h2>Now Showing:</h2>
   <div class="carousel-container">
 		<div class="carousel">
+      <div class="card-border">
       <div class="card">
         <h3 class="title">Avengers: Endgame</h3>
         <img src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SL1304_.jpg">
         <button class="btn">Book Now</button>
       </div>
+      </div>
+      <div class="card-border">
       <div class="card">
         <h3 class="title">Spider-Man: No Way Home</h3>
         <img src="https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_.jpg">
         <button class="btn">Book Now</button>
       </div>
+      </div>
+      <div class="card-border">
       <div class="card">
         <h3 class="title">John Wick</h3>
         <img src="https://legacymovieposters.com/cdn/shop/products/johnwick_fuse.jpg?v=1668071841&width=1946">
         <button class="btn">Book Now</button>
       </div>
+      </div>
+      <div class="card-border">
       <div class="card">
         <h3 class="title">Transformers One</h3>
-        <img src="https://lh3.googleusercontent.com/proxy/O9YW21TZUYpqQsEXxuX7eWIdYdlniuRFW99HFwGUAOQo_tsPiq2XDmb3J2ASMCGNEWNRjlVX9Ax-af5NNLjw4Y28T2HIDExr4hdB8n8qXVpMHfealxK9">
+        <img src="https://resizing.flixster.com/AFGpgeQ8QmSmf9FBvHnKafUY6xs=/fit-in/352x330/v2/https://resizing.flixster.com/Nf9rlbQUjzuMQ-vXdRGMScWkcs8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzU4MDZhYjI1LTFiNTQtNDc0Ni04OTI2LWI0Nzc4OWJiNDYxYy5qcGc=">
         <button class="btn">Book Now</button>
       </div>
+      </div>
+      <div class="card-border">
+      <div class="card">
+        <h3 class="title">Grand Turismo</h3>
+        <img src="https://m.media-amazon.com/images/M/MV5BMjA0N2YyNmYtZDk4Ny00ODE2LThmZWQtNGJiMDk0YzhiNzE5XkEyXkFqcGc@._V1_.jpg">
+        <button class="btn">Book Now</button>
+      </div>
+      </div>
+      <div class="card-border">
+      <div class="card">
+        <h3 class="title">A Minecraft Movie</h3>
+        <img src="https://lh4.googleusercontent.com/proxy/TaDD2E7SoMMw4FhpzUUyNr3Ytw0_jiMaCP513hlqQnSnvpjyDSSqYd4MQRYcJogJOEVu15lGM90a1eermPLnnIyo8E9C80ADlz_-hlZA0oIOp2myZA">
+        <button class="btn">Book Now</button>
+      </div>
+      </div>
+      <div class="card-border">
+      <div class="card">
+        <h3 class="title">Sinners Movie</h3>
+        <img src="https://images.squarespace-cdn.com/content/v1/56047552e4b00047c4e83900/adbc7731-eaed-46bf-94ea-48b3ef09afd1/Sinners+Poster.jpg">
+        <button class="btn">Book Now</button>
+      </div>
+      </div>
     </div>
+  </div>
       <div class="progress-bar">
       <div class="progress"></div>
       </div>
@@ -285,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const dotsContainer = document.querySelector(".dots");
 
   let cardIndex = 0;
-  const totalCards = cards.length;
+  const totalCards = cards.length-4;
   const cardWidth = cards[0].offsetWidth;
   const cardMargin = 32;
   const moveAmount = cardWidth + cardMargin;
