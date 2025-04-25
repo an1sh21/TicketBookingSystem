@@ -7,10 +7,11 @@
   
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(120deg, #1f1c2c, #928dab);
+      background: linear-gradient(120deg, #1f1c2c, #080808);
       color: #eee;
       padding: 30px;
       margin: 0;
+      overflow-x:hidden;
     }
   
     h1 {
@@ -68,9 +69,9 @@
 /* Add this new gradient border using a pseudo-element */
 
 :root {
-  --clr-1: #eb2282;
-  --clr-2: #0c20ec;
-  --clr-3: #5ffbf1;
+  --clr-1: #a73906;
+  --clr-2: #f15e09;
+  --clr-3: #fdec02;
 }
 
 .card-border {
@@ -120,7 +121,7 @@
     .btn {
       align-self: center;
 	    padding: 0.5rem 1rem;
-	    background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+	    background: linear-gradient(90deg, #fd9002, #943701);
 	    color: white;
 	    border: none;
 	    border-radius: 30px;
@@ -224,10 +225,11 @@
 
 .progress {
 	height: 100%;
-	background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+	background: linear-gradient(90deg, #f56009, #f09103);
 	width: 16.66%;
 	transition: width 0.3s ease;
 }
+
 
 
 
@@ -340,6 +342,10 @@
 </body>
 </html>
 <script>
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
   const cards = carousel.querySelectorAll(".card");
@@ -347,6 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextBtn = document.querySelector(".next");
   const progress = document.querySelector(".progress");
   const dotsContainer = document.querySelector(".dots");
+  
 
   let cardIndex = 0;
   const totalCards = cards.length-4;
