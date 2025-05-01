@@ -1,6 +1,4 @@
-Thanks for letting me know! Since React is part of the tech stack, I'll update the README file accordingly to reflect this.
 
----
 
 # TicketBookingSystem
 
@@ -88,6 +86,3 @@ For any inquiries or support, please contact:
 
 - **GitHub**: [an1sh21](https://github.com/an1sh21)
 
----
-
-Let me know if there's anything else you'd like to add or modify!
