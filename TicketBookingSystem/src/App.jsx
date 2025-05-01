@@ -73,19 +73,6 @@ function App() {
     ]
   });
 
-  const addMovie = (newMovie, category) => {
-    setMovies(prev => ({
-      ...prev,
-      [category]: [...prev[category], newMovie]
-    }));
-  };
-
-  const removeMovie = (id, category) => {
-    setMovies(prev => ({
-      ...prev,
-      [category]: prev[category].filter(movie => movie.id !== id)
-    }));
-  };
 
   return (
     <div className="app">
@@ -96,12 +83,6 @@ function App() {
       
       <h2>Coming Soon</h2>
       <ComingSoon movies={movies.comingSoon} />
-      
-      <AdminPanel 
-        movies={movies} 
-        addMovie={addMovie} 
-        removeMovie={removeMovie} 
-      />
     </div>
   );
 }
